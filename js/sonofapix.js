@@ -1,9 +1,9 @@
 var sonofapix = {
   "links": {
-    "mail": {"icon": "fa fa-envelope", "href": "mailto:lagora@sonofapix.com"},
-    "twitter": {"icon": "fa fa-twitter", "href": "http://www.twitter.com/sonofapix"},
-    "tumblr": {"icon": "fa fa-tumblr", "href": "http://sonofapix.tumblr.com/sonofapix"},
-    "instagram": {"icon": "fa fa-instagram", "href": "https://instagram.com/sonofapix"},
+    "mail": {"icon": "fa-envelope", "href": "mailto:lagora@sonofapix.com"},
+    "twitter": {"icon": "fa-twitter", "href": "http://www.twitter.com/sonofapix"},
+    "tumblr": {"icon": "fa-tumblr", "href": "http://sonofapix.tumblr.com/sonofapix"},
+    "instagram": {"icon": "fa-instagram", "href": "https://instagram.com/sonofapix"},
   },
   "projects": {},
   "init": function () {
@@ -14,7 +14,7 @@ var sonofapix = {
     })
     .map(function (each_link) {
       var link_icon = document.createElement('i');
-      link_icon.classList = sonofapix.links[each_link].icon;
+      link_icon.classList = 'fa ' + sonofapix.links[each_link].icon;
       
       var link_a = document.createElement('a');
       link_a.href = sonofapix.links[each_link].href;

@@ -1,0 +1,27 @@
+#links a {
+    color: #f90;
+}
+
+.pagination li a {
+    padding: 0 8px;
+    font-size: 1rem;
+    color: #ff9900;
+    border: 0;
+}
+
+.pagination li.active a,
+.pagination li a:hover,
+.pagination li.active a:hover {
+    background-color: #ff9900;
+    color: #ffffff;
+}
+
+.pagination li a:hover {
+    color: #ff9900;
+    background-color: #ffffff;
+}
+
+#blog .datetime,
+#blog .tags a {
+    color: #ff9900;
+}

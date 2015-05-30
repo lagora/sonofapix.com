@@ -15,6 +15,7 @@ html {
     font-size: 1rem;
     color: #ff9900;
     border: 0;
+    text-decoration: none;
 }
 
 .pagination li.active a,

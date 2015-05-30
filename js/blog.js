@@ -6,8 +6,6 @@ var blogPosts = new List('blog', {
     item: '<li><p><span class="datetime"></span><br><small class="tags hidden"></small></p><p><small class="content"></small></p></li>'
 });
 
-console.log(window.posts);
-
 window.posts.map(function (post) {
     $.ajax({
         url: 'blog/' + post.file
@@ -28,8 +26,6 @@ window.posts.map(function (post) {
         if (post.tags) {
             opts.tags = post.tags.split(',').map(function(a){return '<a>'+a.trim()+'</a>'});
         }
-        console.log(opts.tags);
-
         blogPosts.add(opts);
     });
 });

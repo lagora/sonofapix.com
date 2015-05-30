@@ -2,6 +2,10 @@ html {
     font-size: 1.25rem;
 }
 
+.list-unstyled li {
+    list-style: none;
+}
+
 #links a {
     color: #f90;
 }

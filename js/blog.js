@@ -15,7 +15,11 @@ window.posts.map(function (post) {
             post.datetime =  moment.unix(post.datetime).format('YYYY-MM-DD HH:mm');
         }
 
-        content = content.split('.').map(function (a) {return a.trim().substring(0,1).toUpperCase()+a.substring(2);}).join('. ');
+        content = content.split('.').map(function (a) {
+            var b = a.trim();
+            b = b.substring(0,1).toUpperCase()+b.substring(1);
+            return b;
+        }).join('. ');
 
         post.content = marked(content);
         var opts = {

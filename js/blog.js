@@ -1,7 +1,7 @@
 var blogPosts = new List('blog', {
     valueNames: ['blog-post'],
     page: 1,
-    i: posts.length-1,
+    i: window.posts.length-1,
     plugins: [ ListPagination({})],
     item: '<li><p><span class="datetime"></span><br><small class="tags hidden"></small></p><p><small class="content"></small></p></li>'
 });
@@ -15,7 +15,7 @@ window.posts.map(function (post) {
             post.datetime =  moment.unix(post.datetime).format('YYYY-MM-DD HH:mm');
         }
 
-        content = content.split('.').map(function (a) {return a.trim().substring(0,1).toUpperCase()+a.substring(1);}).join('. ');
+        content = content.split('.').map(function (a) {return a.trim().substring(0,1).toUpperCase()+a.substring(2);}).join('. ');
 
         post.content = marked(content);
         var opts = {

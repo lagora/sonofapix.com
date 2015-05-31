@@ -1,7 +1,7 @@
 var blogPosts = new List('blog', {
     valueNames: ['blog-post'],
     page: 1,
-    i: window.posts.length-1,
+    // i: window.posts.length-1,
     plugins: [ ListPagination({})],
     item: '<li><p><span class="datetime"></span><br><small class="tags hidden"></small></p><p><small class="content"></small></p></li>'
 });

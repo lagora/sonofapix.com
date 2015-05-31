@@ -1,8 +1,26 @@
+.debug {
+    border: 1 px solid red;
+}
+
+#blog .list {
+    list-style: none;
+}
+
+#blog .list .datetime {
+    font-size: 1rem;
+}
+
+.pagination li {
+    display: inline-flex;
+}
+
 #links a {
     color: #f90;
 }
 
 .pagination li a {
+    font-size: 1rem;
+    text-decoration: none;
     padding: 0 8px;
     font-size: 1rem;
     color: #ff9900;
@@ -12,6 +30,7 @@
 .pagination li.active a,
 .pagination li a:hover,
 .pagination li.active a:hover {
+    font-size: 1rem;
     background-color: #ff9900;
     color: #ffffff;
 }

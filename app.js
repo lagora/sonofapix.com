@@ -4,7 +4,7 @@ var fs = require('fs');
 var marked = require('marked');
 var moment = require('moment');
 var path = require('path');
-//var blogindex = require('./blog/index.json');
+var blogindex = require('./blog/index.json');
 
 app.use('/img', express.static(__dirname + "/img"));
 app.use('/css', express.static(__dirname + "/css"));
@@ -25,6 +25,6 @@ var server = app.listen(80, function() {
 });
 
 var io = require('socket.io').listen(server);
-io.on('connection', function (socket) {
-    socket.emit('blog', getBlogPosts());
+io.on('ready', function (socket) {
+    socket.emit('blog', blogindex);
 });

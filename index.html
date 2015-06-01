@@ -118,6 +118,24 @@
             </div>
 
         </div>
+        <script>
+            var socket = io('http://localhost');
+            socket.emit('ready');
+            socket.on('blog', function (data) {
+                console.log('data', data);
+            });
+        </script>
+<!--
+        socket.on('blog', function (data) {
+            var blogPosts = new List('blog', {
+                valueNames: ['blog-post'],
+                page: 1,
+                i: data.length-1,
+                plugins: [ ListPagination({})],
+                item: '<li><p><small class="datetime"></small><small class="tags hidden"></small></p><p class="content"></p></li>'
+            }, data);
+        });
+-->
 <!--		<script type="text/javascript" src="blog/index.js" defer></script>-->
 <!--		<script type="text/javascript" src="./js/blog.js" defer></script>-->
 	</body>

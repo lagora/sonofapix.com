@@ -26,5 +26,6 @@ var server = app.listen(80, function() {
 
 var io = require('socket.io').listen(server);
 io.on('ready', function (socket) {
+    console.log('ready');
     socket.emit('blog', blogindex);
 });

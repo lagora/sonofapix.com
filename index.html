@@ -22,7 +22,7 @@
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
 		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/list.pagination.js/0.1.1/list.pagination.min.js"></script>
-        <script src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -118,9 +118,9 @@
 
         </div>
         <script>
-            var socket = io('http://localhost');
+            var socket = io.connect('http://localhost');
             socket.emit('ready');
-            socket.on('blog', function (data) {
+            socket.emit('blog', function (data) {
                 console.log('data', data);
             });
         </script>
@@ -135,7 +135,5 @@
             }, data);
         });
 -->
-<!--		<script type="text/javascript" src="blog/index.js" defer></script>-->
-<!--		<script type="text/javascript" src="./js/blog.js" defer></script>-->
 	</body>
 </html>

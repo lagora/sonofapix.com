@@ -1,1 +1,0 @@
-about the games, they're still a lot of work to be done : more prototypes, trying out lots of libraries/frameworks/middlewares. and more communication ? maybe some screenshot saturday.

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta charset="utf-8">
+    {{ partial "meta.html" . }}
+    <base href="{{ .Site.BaseURL }}">
+    <title>{{ .Site.Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+
+    {{ partial "head_includes.html" . }}
+</head>
+<body lang="en">
+  {{ partial "subheader.html" . }}
+  <div>&nbsp;</div>
+  <span>Currently closed for maintenance but will be back somewhere in 2016, with games, hopefully :)</span>
+  <!-- <section id="main">
+    <div>
+      {{ range first 10 .Data.Pages }}
+      {{ .Render "summary"}}
+      {{ end }}
+    </div>
+  </section> -->

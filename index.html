@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Son Of A Pix</title>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v1.2.1/dist/aframe-physics-system.min.js"></script>
+  </head>
+  <body>
+    <a-scene physics="debug: true">
+      <a-box color="#6173F4" opacity="0.8" position="0 0.5 0" width="1" height="1" depth="1"></a-box>
+      <a-sky color="#ECECEC"></a-sky>
+      <a-camera position="0 0 0" rotation="5 0 0"></a-camera>
+      <a-entity id="room">
+        <a-plane id="floor" color="#CCC" width="20" height="20" position="0 0 0" rotation="-90 0 0"></a-plane>
+        <a-plane id="ceiling" color="#CCC" width="20" height="20" position="0 10 0" rotation="-270 0 0"></a-plane>
+        <a-entity id="desk">
+          <a-box color="#CCC" opacity="1" position="0 1 -5" width="4" height="0.1" depth="1.5">
+            <a-box color="#CCC" opacity="1" position="0 -0.5 0.725" width="4" height="1" depth="0.05"></a-box>
+            <a-box color="#CCC" opacity="1" position="-1.975 -0.5 0" width="0.05" height="1" depth="1.5"></a-box>
+            <a-box color="#CCC" opacity="1" position="1.975 -0.5 0" width="0.05" height="1" depth="1.5"></a-box>
+          </a-box>
+        </a-entity>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
